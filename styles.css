@@ -25,7 +25,7 @@
     .sidebar {
       padding: 10px;
       position: absolute;
-      left: 35px;
+      left: 45px;
       top: 30px;
       z-index: 50;
       background: transparent;
@@ -41,8 +41,15 @@
     .sidebar h4 {
       margin: 0 0 10px 0;
       min-height: 20px;
-      font-size:16px;
+      font-size:15px;
+	  color: black;
     }
+	
+	.sidebar h5 {
+      font-size:14px;
+		margin: 0 0 0px 0;
+    }
+
 
 
 
