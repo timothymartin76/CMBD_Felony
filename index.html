@@ -1,0 +1,29 @@
+<html>
+<head>
+  <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.11/themes/css/cartodb.css" />  
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="./js/nv.d3.js"></script>
+  <script src="http://libs.cartocdn.com/cartodb.js/v3/3.11/cartodb.js"></script>
+
+  <script src="./js/script.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+  <link href='styles.css' rel='stylesheet' type='text/css'>
+  <script>
+
+  </script>
+</head>
+
+<body onload="init()">
+  <div id='map'></div>
+  <div class='sidebar mainSidebar'>
+    <h4 class='sidebarLabel'>Total Major Felonies</br> by Police Precinct</h4>
+      <div class="nypp_precinct"></div> 
+      <div class="total"></div>
+      <div id="TopComplaintsChart"><svg></svg></div>
+</div>
+  </div>
+  <div class="sidebar noData" style="display:none">
+    <h4>No Data Available</h4>
+  </div>
+</body>
+</html>
