@@ -13,8 +13,9 @@ var map;
   function init(){
     // initiate leaflet map
     map = new L.Map('map', { 
-      center: [40.7,-73.96],
-      zoom: 11,
+	zoomControl: false,
+      center: [40.7,-74.08], 
+      zoom: 10,
     })
    var layer = L.tileLayer('',{
   attribution: ''
