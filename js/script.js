@@ -1,5 +1,5 @@
 var map;
-  var baseAPI = 'https://timothymartin76.cartodb.com/api/v2/sql?format=GeoJSON&q=SELECT * FROM precinct_data_merge WHERE cartodb_id = '
+  var baseAPI = 'https://timothymartin76.cartodb.com/api/v2/sql?format=GeoJSON&q=SELECT * FROM cmbd_felonies_merge WHERE cartodb_id = '
 
   var layerGroup = new L.LayerGroup();
 
@@ -24,7 +24,7 @@ var map;
 
 
     }).addTo(map);
-    var layerUrl = 'https://timothymartin76.cartodb.com/api/v2/viz/cbe992de-b3f2-11e5-af8c-0ecd1babdde5/viz.json';
+    var layerUrl = 'https://timothymartin76.cartodb.com/api/v2/viz/8239fca0-b55f-11e5-89b9-0ecd1babdde5/viz.json';
     var sublayers = [];
 
 
@@ -90,7 +90,7 @@ var map;
       function updateSidebar(f) {
 
         //first check if there is data
-        if (f.nypp_precinct == null) {
+        if (f.community_board == null) {
           $('.noData').show();
           $('.mainSidebar').hide();
         } else { 
@@ -99,12 +99,16 @@ var map;
         }
 
 
-        $('.nypp_precinct').text(function(){
-          return "Precinct #:  " + f.nypp_precinct;
+        $('.community_board').text(function(){
+          return "Community Board #:  " + f.community_board;
+        });
+		
+		$('.borough').text(function(){
+          return "Borough:  " + f.borough;
         });
 
-       $('.total').text(function(){
-          return "Total Major Felonies:  " + f.total;
+       $('.total_felonies').text(function(){
+          return "Total Major Felonies:  " + f.total_felonies;
         });
 
 
