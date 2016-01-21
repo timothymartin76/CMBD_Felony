@@ -15,7 +15,7 @@ var map;
     map = new L.Map('map', { 
 	zoomControl: false,
       center: [40.694526,-73.936176], 
-      zoom: 11,
+      zoom: 12,
     })
    var layer = L.tileLayer('',{
   attribution: ''
