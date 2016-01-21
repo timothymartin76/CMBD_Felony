@@ -15,7 +15,7 @@ var map;
     map = new L.Map('map', { 
 	zoomControl: true,
 	fullscreen : true,
-	scrollwheel: false,
+	ScrollWheelZoom: false,
 	fullscreen : true,
       center: [40.694526,-73.936176], 
       zoom: 12,
