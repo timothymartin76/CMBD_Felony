@@ -15,12 +15,12 @@ var map;
     map = new L.Map('map', { 
 	zoomControl: true,
 	fullscreen : true,
-	ScrollWheelZoom: false,
+	scrollWheelZoom: false,
 	fullscreen : true,
       center: [40.694526,-73.936176], 
       zoom: 11,
     })
-   var layer = L.tileLayer('',{
+   var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',{
   attribution: ''
 
 
