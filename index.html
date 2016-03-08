@@ -8,18 +8,53 @@
   <script src="./js/script.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
   <link href='styles.css' rel='stylesheet' type='text/css'>
-  <script>
-
-  </script>
+  
+     <title>Felonies by CMBD</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  
 </head>
+
+
+  <style>
+    html, body, #container {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+	  font-family: Droid Sans Mono;
+	  
+    }
+    body {
+      padding-top: 50px;
+	  font-family: Droid Sans Mono;
+    }
+
+
+    .navbar .navbar-brand {
+      font-weight: bold;
+	  font-family: Droid Sans Mono;
+      font-size: 15px;
+      color: #000000;
+    }
+    .navbar {
+      background: white;
+    }
+	
+	 </style>
+	
+ <body>
+ <div class="navbar navbar-fixed-top" role="navigation">     
+  <a class="navbar-brand" href="#">2015 NYC Major Felony Offenses by Community Board</a>
+    </div>
 
 <body onload="init()">
   <div id='map'></div>
   <div class='sidebar mainSidebar'>
 	<h5 class='sidebarLabel'>Hover over Community Boards</h5>
-      <h4 class="community_board"></h4> 
+      <h4 class="cmbd"></h4> 
 	  <h4 class="borough"></h4> 
-      <h4 class="total_felonies"></h4>
+      <h4 class="total"></h4>
       <div id="TopComplaintsChart"><svg></svg></div>
 </div>
   </div>
