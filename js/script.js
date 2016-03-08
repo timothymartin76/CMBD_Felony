@@ -1,5 +1,5 @@
 var map;
-  var baseAPI = 'https://timothymartin76.cartodb.com/api/v2/sql?format=GeoJSON&q=SELECT * FROM cmbd_felonies_merge WHERE cartodb_id = '
+  var baseAPI = 'https://timothymartin76.cartodb.com/api/v2/sql?format=GeoJSON&q=SELECT * FROM cmbd_crime_agg_merge WHERE cartodb_id = '
 
   var layerGroup = new L.LayerGroup();
 
@@ -14,20 +14,21 @@ var map;
     // initiate leaflet map
     map = new L.Map('map', { 
 	zoomControl: true,
+	title: true,
 	fullscreen : true,
-	scrollWheelZoom: false,
+	ScrollWheelZoom: true,
 	fullscreen : true,
       center: [40.694526,-73.936176], 
       zoom: 11,
     })
-   var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',{
+   var layer = L.tileLayer('',{
   attribution: ''
 
 
 
 
     }).addTo(map);
-    var layerUrl = 'https://timothymartin76.cartodb.com/api/v2/viz/8239fca0-b55f-11e5-89b9-0ecd1babdde5/viz.json';
+    var layerUrl = 'https://timothymartin76.cartodb.com/api/v2/viz/9aa4fc42-e546-11e5-bfa5-0e674067d321/viz.json';
     var sublayers = [];
 
 
@@ -93,7 +94,7 @@ var map;
       function updateSidebar(f) {
 
         //first check if there is data
-        if (f.community_board == null) {
+        if (f.cmbd == null) {
           $('.noData').show();
           $('.mainSidebar').hide();
         } else { 
@@ -102,16 +103,16 @@ var map;
         }
 
 
-        $('.community_board').text(function(){
-          return "Community Board #:  " + f.community_board;
+        $('.cmbd').text(function(){
+          return "Community Board #:  " + f.cmbd;
         });
 		
 		$('.borough').text(function(){
           return "Borough:  " + f.borough;
         });
 
-       $('.total_felonies').text(function(){
-          return "Total Major Felonies:  " + f.total_felonies;
+       $('.total').text(function(){
+          return "Total Major Felonies:  " + f.total;
         });
 
 
@@ -147,7 +148,7 @@ var map;
             } ,
 			 { 
               "label" : "Murder" , 
-              "value" : f.murder
+              "value" : f.murder_non_negl_manslaughte
             } 
           ]
         
