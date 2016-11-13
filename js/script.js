@@ -28,7 +28,7 @@ var map;
 
 
     }).addTo(map);
-    var layerUrl = 'https://timothymartin76.cartodb.com/api/v2/viz/9aa4fc42-e546-11e5-bfa5-0e674067d321/viz.json';
+    var layerUrl = 'https://timothymartin76.carto.com/api/v2/viz/9aa4fc42-e546-11e5-bfa5-0e674067d321/viz.json';
     var sublayers = [];
 
 
