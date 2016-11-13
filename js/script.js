@@ -17,8 +17,9 @@ var map;
 	title: true,
 	fullscreen : true,
 	ScrollWheelZoom: true,
+	fullscreen : true,
       center: [40.694526,-73.936176], 
-      zoom: 10,
+      zoom: 11,
     })
    var layer = L.tileLayer('',{
   attribution: ''
@@ -192,5 +193,3 @@ nv.addGraph(function() {
 
   return TopComplaintsChart;
 });
-
-
