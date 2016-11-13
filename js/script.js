@@ -19,7 +19,7 @@ var map;
 	ScrollWheelZoom: true,
 	fullscreen : true,
       center: [40.694526,-73.936176], 
-      zoom: 11,
+      zoom: 10,
     })
    var layer = L.tileLayer('',{
   attribution: ''
