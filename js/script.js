@@ -16,7 +16,7 @@ var map;
 	zoomControl: true,
 	title: true,
 	fullscreen : true,
-	ScrollWheelZoom: true,
+	ScrollWheelZoom: false,
 	fullscreen : true,
       center: [40.694526,-73.936176], 
       zoom: 10,
