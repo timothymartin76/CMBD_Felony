@@ -16,10 +16,9 @@ var map;
 	zoomControl: true,
 	title: true,
 	fullscreen : true,
-	ScrollWheelZoom: true,
-	fullscreen : true,
+	ScrollWheelZoom: false,
       center: [40.694526,-73.936176], 
-      zoom: 11,
+      zoom: 10,
     })
    var layer = L.tileLayer('',{
   attribution: ''
@@ -28,7 +27,7 @@ var map;
 
 
     }).addTo(map);
-    var layerUrl = 'https://timothymartin76.cartodb.com/api/v2/viz/9aa4fc42-e546-11e5-bfa5-0e674067d321/viz.json';
+    var layerUrl = 'https://timothymartin76.carto.com/api/v2/viz/8239fca0-b55f-11e5-89b9-0ecd1babdde5/viz.json';
     var sublayers = [];
 
 
