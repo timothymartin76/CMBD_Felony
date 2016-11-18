@@ -34,7 +34,7 @@ var map;
 
 
     var currentHover, newFeature = null;
-    cartodb.createLayer(map, layerUrl)
+    cartodb.createLayer(map, layerUrl,{https: true})
       .addTo(map)
       .on('done', function(layer) {
         
